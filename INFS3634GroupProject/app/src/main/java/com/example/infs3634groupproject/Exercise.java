@@ -2,8 +2,6 @@ package com.example.infs3634groupproject;
 
 public class Exercise {
 
-<<<<<<< HEAD
-=======
     private int exerciseID;
 
     private String exerciseName;
@@ -51,5 +49,5 @@ public class Exercise {
     public void setExerciseDrawableID(int exerciseDrawableID) {
         this.exerciseDrawableID = exerciseDrawableID;
     }
->>>>>>> 2bf2b0527684ff1e4a3a192d777205013f31d6b2
+
 }

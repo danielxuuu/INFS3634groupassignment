@@ -53,6 +53,6 @@ public class Medal {
     }
 
     public void setMedalDrawableID(int medalDrawableID) {
-        this.medalDrawableID = iconID;
+        this.medalDrawableID = medalDrawableID;
     }
 }
