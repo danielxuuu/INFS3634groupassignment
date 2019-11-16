@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
 
@@ -8,78 +9,108 @@
     android:orientation="horizontal">
 
 
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gavin Chiem"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="10dp" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/profileLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
-    <TextView
-        android:id="@+id/goal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Strength"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="67dp" />
+        <TextView
+            android:id="@+id/headingName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:text="Name: "
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/headingGoal"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Goal: "
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="67dp" />
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="Gavin Chiem"
+            app:layout_constraintLeft_toRightOf="@id/headingName"
+            app:layout_constraintTop_toTopOf="@id/headingName"
+            tools:layout_editor_absoluteX="67dp"
+            tools:layout_editor_absoluteY="10dp" />
 
-    <TextView
-        android:id="@+id/headingName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Name: "
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="10dp" />
+        <TextView
+            android:id="@+id/headingAge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Age: "
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/headingName"
+            app:layout_constraintTop_toBottomOf="@id/headingName"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="29dp" />
 
-    <TextView
-        android:id="@+id/headingGender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Gender: "
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="48dp" />
+        <TextView
+            android:id="@+id/age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="23"
+            app:layout_constraintLeft_toLeftOf="@id/name"
+            app:layout_constraintTop_toTopOf="@id/headingAge" />
 
-    <TextView
-        android:id="@+id/age"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="23"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="29dp" />
+        <TextView
+            android:id="@+id/headingGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Gender: "
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/headingAge"
+            app:layout_constraintTop_toBottomOf="@id/headingAge"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="48dp" />
 
-    <TextView
-        android:id="@+id/headingAge"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Age: "
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="15dp"
-        tools:layout_editor_absoluteY="29dp" />
+        <TextView
+            android:id="@+id/gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Male"
+            app:layout_constraintLeft_toRightOf="@+id/headingGender"
+            app:layout_constraintTop_toTopOf="@id/headingGender"
+            tools:layout_editor_absoluteX="67dp"
+            tools:layout_editor_absoluteY="48dp" />
 
-    <TextView
-        android:id="@+id/gender"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Male"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="48dp" />
+        <TextView
+            android:id="@+id/headingGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Goal: "
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="@id/headingGender"
+            app:layout_constraintTop_toBottomOf="@id/headingGender"
+            tools:layout_editor_absoluteX="15dp"
+            tools:layout_editor_absoluteY="67dp" />
+
+        <TextView
+            android:id="@+id/goal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Strength"
+            app:layout_constraintLeft_toRightOf="@id/headingGoal"
+            app:layout_constraintTop_toTopOf="@id/headingGoal"
+            tools:layout_editor_absoluteX="67dp"
+            tools:layout_editor_absoluteY="67dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/profileLayout"
+        app:layout_constraintTop_toTopOf="@+id/profileLayout"
+        app:layout_constraintBottom_toBottomOf="parent"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
