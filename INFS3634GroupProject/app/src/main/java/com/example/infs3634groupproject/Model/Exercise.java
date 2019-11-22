@@ -1,11 +1,20 @@
-package com.example.infs3634groupproject;
+package com.example.infs3634groupproject.Model;
 
+import androidx.room.Entity;
+import androidx.room.PrimaryKey;
+
+import com.google.gson.annotations.SerializedName;
+
+@Entity
 public class Exercise {
 
+
+    @SerializedName("id")
+    @PrimaryKey
     private int exerciseID;
-
+    @SerializedName("name")
     private String exerciseName;
-
+    @SerializedName("description")
     private String exerciseInstructions;
 
     //private int exerciseDrawableID;
@@ -46,7 +55,13 @@ public class Exercise {
         this.exerciseInstructions = exerciseInstructions;
     }
 
-  /*  public void setExerciseDrawableID(int exerciseDrawableID) {
+    @Override
+    public String toString () {
+        return exerciseID+" " +exerciseName + " " +exerciseInstructions;
+    }
+
+
+    /*  public void setExerciseDrawableID(int exerciseDrawableID) {
         this.exerciseDrawableID = exerciseDrawableID;
     }*/
 
