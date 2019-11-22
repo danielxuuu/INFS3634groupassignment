@@ -8,14 +8,14 @@ public class Exercise {
 
     private String exerciseInstructions;
 
-    private int exerciseDrawableID;
+    //private int exerciseDrawableID;
 
 
-    public Exercise(int exerciseID, String exerciseName, String exerciseInstructions, int exerciseDrawableID) {
+    public Exercise(int exerciseID, String exerciseName, String exerciseInstructions) {
         this.exerciseID = exerciseID;
         this.exerciseName = exerciseName;
         this.exerciseInstructions = exerciseInstructions;
-        this.exerciseDrawableID = exerciseDrawableID;
+        //this.exerciseDrawableID = exerciseDrawableID;
     }
 
     public int getExerciseID() {
@@ -30,9 +30,9 @@ public class Exercise {
         return exerciseInstructions;
     }
 
-    public int getExerciseDrawableID() {
+    /*public int getExerciseDrawableID() {
         return exerciseDrawableID;
-    }
+    }*/
 
     public void setExerciseID(int exerciseID) {
         this.exerciseID = exerciseID;
@@ -46,7 +46,8 @@ public class Exercise {
         this.exerciseInstructions = exerciseInstructions;
     }
 
-    public void setExerciseDrawableID(int exerciseDrawableID) {
+  /*  public void setExerciseDrawableID(int exerciseDrawableID) {
         this.exerciseDrawableID = exerciseDrawableID;
-    }
+    }*/
+
 }
